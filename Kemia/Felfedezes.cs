@@ -8,15 +8,15 @@ namespace Kemia
 {
     class Felfedezes
     {
-        public string Ev { get; set; }
+        public string Ev { get; }
 
-        public string Nev { get; set; }
+        public string Nev { get; }
 
-        public string Vegyjel { get; set; }
+        public string Vegyjel { get; }
 
-        public int Rendszam { get; set; }
+        public int Rendszam { get; }
 
-        public string Felfedezo { get; set; }
+        public string Felfedezo { get; }
 
         public Felfedezes(string ev, string nev, string vegyjel, int rendszam, string felfedezo)
         {
