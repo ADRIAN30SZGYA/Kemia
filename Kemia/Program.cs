@@ -14,8 +14,14 @@ namespace Kemia
         {
             MasodikFeladat();
             HarmadikFeladat();
+            NegyedikFeladat();
 
             Console.ReadKey();
+        }
+
+        private static void NegyedikFeladat()
+        {
+            Console.WriteLine("4. feladat: Felfedézesek száma az ókorban: " + felfedezes.Count(x => x.Ev == "Ókor"));
         }
 
         private static void HarmadikFeladat()
