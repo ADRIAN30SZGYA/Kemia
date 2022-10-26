@@ -15,8 +15,20 @@ namespace Kemia
             MasodikFeladat();
             HarmadikFeladat();
             NegyedikFeladat();
+            OtodikFeladat();
 
             Console.ReadKey();
+        }
+
+        private static void OtodikFeladat()
+        {
+            Console.Write("5. feladat: Kérek egy vegyjelet: ");
+            string bekeres = Console.ReadLine();
+            while (bekeres.All(Char.IsLetter) && (bekeres.Length > 2 || bekeres.Length == 0))
+            {
+                Console.Write("5. feladat: Kérek egy vegyjelet: ");
+                bekeres = Console.ReadLine();
+            }
         }
 
         private static void NegyedikFeladat()
