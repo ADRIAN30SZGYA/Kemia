@@ -26,7 +26,7 @@ namespace Kemia
 
             bool van = false;
             int i = 0;
-            while (!van && i < bekeres.Length)
+            while (!van && i < felfedezes.Count)
             {
                 if (felfedezes[i].Vegyjel.ToLower() == bekeres.ToLower())
                 {
@@ -50,7 +50,7 @@ namespace Kemia
         {
             Console.Write("5. feladat: Kérek egy vegyjelet: ");
             string bekeres = Console.ReadLine();
-            while (!bekeres.All(Char.IsLetter) && (bekeres.Length > 2 || bekeres.Length == 0))
+            while (bekeres.All(Char.IsLetter) && bekeres.Length != 2)
             {
                 Console.Write("5. feladat: Kérek egy vegyjelet: ");
                 bekeres = Console.ReadLine();
