@@ -55,7 +55,7 @@ namespace Kemia
         private static void HetedikFeladat()
         {
             int i = 0;
-            foreach (var item in felfedezes)
+            foreach (var item in felfedezes.OrderBy(x => x.Ev))
             {
                 if (item.Ev == "Ókor")
                 {
@@ -74,6 +74,18 @@ namespace Kemia
                 }
                 i++;
             }
+
+            //var lekeres = (from item in felfedezes 
+            //               where item.Ev != "Ókor" 
+            //               orderby item.Ev 
+            //               select item).ToList();
+
+            //int max = Convert.ToInt32(lekeres[1].Ev) - Convert.ToInt32(lekeres[0].Ev); 
+
+            //for (int i = 2; i < lekeres.Count; i++)
+            //{
+
+            //}
 
             Console.WriteLine("7. feladat: " + max + " év volt a leghosszabb időszak két elem felfedezése között.");
         }
