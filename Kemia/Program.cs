@@ -17,8 +17,39 @@ namespace Kemia
             NegyedikFeladat();
             OtodikFeladat();
             HetedikFeladat();
+            NyolcadikFeladat();
 
             Console.ReadKey();
+        }
+
+        private static void NyolcadikFeladat()
+        {
+            Console.WriteLine("8. feladat: Statisztika");
+
+            Dictionary<string, int> stat = new Dictionary<string, int>();
+
+            foreach (var item in felfedezes)
+            {
+                if (item.Ev != "Ókor")
+                {
+                    if (stat.ContainsKey(item.Ev))
+                    {
+                        stat[item.Ev]++;
+                    }
+                    else
+                    {
+                        stat.Add(item.Ev, 1);
+                    }
+                }
+            }
+
+            foreach (var item in stat)
+            {
+                if (item.Value > 3)
+                {
+                    Console.WriteLine("\t" + item.Key + ": " + item.Value + " db");
+                }
+            }
         }
 
         private static void HetedikFeladat()
