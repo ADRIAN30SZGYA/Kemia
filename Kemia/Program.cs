@@ -16,8 +16,35 @@ namespace Kemia
             HarmadikFeladat();
             NegyedikFeladat();
             OtodikFeladat();
+            HetedikFeladat();
 
             Console.ReadKey();
+        }
+
+        private static void HetedikFeladat()
+        {
+            int i = 0;
+            foreach (var item in felfedezes)
+            {
+                if (item.Ev == "Ókor")
+                {
+                    i++;
+                }
+            }
+
+            int max = Convert.ToInt32(felfedezes[i + 1].Ev) - Convert.ToInt32(felfedezes[i].Ev);
+            i++;
+
+            while (i < felfedezes.Count - 1)
+            {
+                if (max < Convert.ToInt32(felfedezes[i + 1].Ev) - Convert.ToInt32(felfedezes[i].Ev))
+                {
+                    max = Convert.ToInt32(felfedezes[i + 1].Ev) - Convert.ToInt32(felfedezes[i].Ev);
+                }
+                i++;
+            }
+
+            Console.WriteLine("7. feladat: " + max + " év volt a leghosszabb időszak két elem felfedezése között.");
         }
 
         private static void HatodikFeladat(string bekeres)
